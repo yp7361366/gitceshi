@@ -25,7 +25,7 @@ public class MainActivity extends Activity implements MyPopWindow.OnItemPopListe
         super.onCreate(savedInstanceState);
         mcontext = this;
         setContentView(R.layout.activity_main);
-        final Button bt_pop = (Button) findViewById(R.id.bt_pop);
+        final Button bt_pop = (Button) findViewById(R.id.bt_setect);
         initData();
         bt_pop.setOnClickListener(new View.OnClickListener() {
             @Override
