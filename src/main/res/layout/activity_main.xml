@@ -10,6 +10,7 @@
         android:id="@+id/recyview_image"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@android:color/darker_gray"
         android:layout_above="@+id/lly_btn"></android.support.v7.widget.RecyclerView>
 
     <LinearLayout
