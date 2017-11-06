@@ -6,12 +6,50 @@
     android:layout_height="match_parent"
     tools:context="com.example.myvediodemo.MainActivity">
 
-    <Button
-        android:id="@+id/bt_pop"
-        android:layout_width="wrap_content"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyview_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/lly_btn"></android.support.v7.widget.RecyclerView>
+
+    <LinearLayout
+        android:id="@+id/lly_btn"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:text="POPwindown"/>
-    
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/bt_setect"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bt_backgroud"
+            android:text="@string/selectr"/>
+        <Button
+            android:id="@+id/bt_history"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bt_backgroud"
+            android:text="@string/hioster"/>
+        <Button
+            android:id="@+id/bt_start"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bt_backgroud"
+            android:text="@string/start"/>
+        <Button
+            android:id="@+id/bt_stop"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bt_backgroud"
+            android:text="@string/stop"/>
+    </LinearLayout>
 
 </RelativeLayout>

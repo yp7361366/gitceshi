@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">MyVedioDemo</string>
+    <string name="selectr">选择</string>
+    <string name="hioster">历史</string>
+    <string name="start">播放</string>
+    <string name="stop">停止</string>
 </resources>
