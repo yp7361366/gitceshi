@@ -23,10 +23,14 @@ public class MyPopWindow extends PopupWindow implements AdapterView.OnItemClickL
     private List<String> mList;
     private final LayoutInflater inflater;
     public OnItemPopListener mOnItemPopListener;
-    public MyPopWindow(Context context, List<String> list){
-        this.mList = list;
+    public MyPopWindow(Context context){
         inflater = LayoutInflater.from(context);
         init();
+    }
+
+    public void addList(List<String> list){
+        this.mList.clear();
+        this.mList = list;
     }
 
     private void init() {
@@ -42,6 +46,8 @@ public class MyPopWindow extends PopupWindow implements AdapterView.OnItemClickL
         this.setOutsideTouchable(true);
         this.setBackgroundDrawable(new ColorDrawable(0000000000));//设置保证back，或点击窗体外区域Popwidow消息
 //        this.setAnimationStyle();  //设置弹出窗体动画效果
+        this.setAnimationStyle(R.style.bt_pop);
+
 
     }
 

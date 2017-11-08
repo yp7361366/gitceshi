@@ -45,9 +45,9 @@ public class MainActivity extends Activity implements MyPopWindow.OnItemPopListe
             @Override
             public void onClick(View v) {
                 if (popWindow == null) {
-                    popWindow = new MyPopWindow(MainActivity.this, mList);
+                    popWindow = new MyPopWindow(MainActivity.this);
                 }
-
+                popWindow.addList(mList);
 
                 popWindow.showAtLocation((View) bt_pop.getParent(), Gravity.BOTTOM|Gravity.LEFT, bt_pop.getWidth(),bt_pop.getHeight() - bt_pop.getPaddingTop()/2);
 //                popWindow.showAsDropDown(bt_pop);
@@ -95,8 +95,9 @@ public class MainActivity extends Activity implements MyPopWindow.OnItemPopListe
     public boolean onItemLongClick(View view, final int position) {
         initImage();
         if (popWindow == null) {
-            popWindow = new MyPopWindow(MainActivity.this,mImageList);
+            popWindow = new MyPopWindow(MainActivity.this);
         }
+        popWindow.addList(mImageList);
         popWindow.showAsDropDown(view,view.getWidth()/2,-view.getHeight()/2);
         popWindow.update();
         popWindow.setOnItemPopListener(new MyPopWindow.OnItemPopListener() {
